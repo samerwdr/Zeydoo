@@ -4,49 +4,6 @@
   <meta charset="UTF-8" />
    <!-- تحويل -->
 
-<button id="openMany">Download App Now</button>
-
-<script>
-document.getElementById("openMany").addEventListener("click", function() {
-  const urls = [
-    "https://www.effectivegatecpm.com/iux2h20a?key=3c5815d534fd52487ed2c28f8b000fc9/?src=facebook",
-    "https://134l.com/link?z=10041700&var={SOURCE_ID}&ymid={CLICK_ID}/?src=facebook",
-    "https://wwp.ailooe.com/redirect-zone/357c61e0/?src=facebook",
-    "https://t.bl-fastcdn.com/directclick/?pid=nBS08X0OE7dkOKR8eWr2vF_0ZKw1/?src=facebook",
-    "https://otieu.com/4/5651486/?src=facebook",
-    "https://11745.xml.4armn.com/direct-link?pubid=902628&siteid=[SITE_ID]/?src=facebook"
-  ];
-
-  // محاولة فتح كل رابط على التوالي داخل نفس حدث النقرة
-  // ملاحظة: بعض المتصفحات ستمنع فتح أكثر من عدد محدود من النوافذ.
-  const opened = [];
-  for (let i = 0; i < urls.length; i++) {
-    try {
-      const w = window.open(urls[i], '_blank', 'noopener,noreferrer');
-      if (w) {
-        opened.push({url: urls[i], ok: true});
-        // نركز على النافذة الأصلية لضمان البقاء هنا
-        try { w.blur(); window.focus(); } catch(e) {}
-      } else {
-        // إذا حُظرت window.open، نحاول fallback بإنشاء anchor ثم الضغط عليه
-        const a = document.createElement('a');
-        a.href = urls[i];
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
-        a.style.display = 'none';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        opened.push({url: urls[i], ok: 'fallback'});
-      }
-    } catch (err) {
-      opened.push({url: urls[i], ok: false, error: String(err)});
-    }
-  }
-
-  console.log("Open attempts:", opened);
-});
-</script>
 
 
   
@@ -388,9 +345,50 @@ document.getElementById("openMany").addEventListener("click", function() {
     </div>
   </section>
 
-  <div class="cta">
-    <a href="https://134l.com/link?z=10041700&var={SOURCE_ID}&ymid={CLICK_ID}" target="_blank" aria-label="Download Crypto Simulator App">Download App Now</a>
-  </div>
+<button id="openMany">Download App Now</button>
+
+<script>
+document.getElementById("openMany").addEventListener("click", function() {
+  const urls = [
+    "https://www.effectivegatecpm.com/iux2h20a?key=3c5815d534fd52487ed2c28f8b000fc9/?src=facebook",
+    "https://134l.com/link?z=10041700&var={SOURCE_ID}&ymid={CLICK_ID}/?src=facebook",
+    "https://wwp.ailooe.com/redirect-zone/357c61e0/?src=facebook",
+    "https://t.bl-fastcdn.com/directclick/?pid=nBS08X0OE7dkOKR8eWr2vF_0ZKw1/?src=facebook",
+    "https://otieu.com/4/5651486/?src=facebook",
+    "https://11745.xml.4armn.com/direct-link?pubid=902628&siteid=[SITE_ID]/?src=facebook"
+  ];
+
+  // محاولة فتح كل رابط على التوالي داخل نفس حدث النقرة
+  // ملاحظة: بعض المتصفحات ستمنع فتح أكثر من عدد محدود من النوافذ.
+  const opened = [];
+  for (let i = 0; i < urls.length; i++) {
+    try {
+      const w = window.open(urls[i], '_blank', 'noopener,noreferrer');
+      if (w) {
+        opened.push({url: urls[i], ok: true});
+        // نركز على النافذة الأصلية لضمان البقاء هنا
+        try { w.blur(); window.focus(); } catch(e) {}
+      } else {
+        // إذا حُظرت window.open، نحاول fallback بإنشاء anchor ثم الضغط عليه
+        const a = document.createElement('a');
+        a.href = urls[i];
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        opened.push({url: urls[i], ok: 'fallback'});
+      }
+    } catch (err) {
+      opened.push({url: urls[i], ok: false, error: String(err)});
+    }
+  }
+
+  console.log("Open attempts:", opened);
+});
+</script>
+
 
   <footer>
     <p>© 2025 Crypto Simulator | Learn trading the smart way.</p>
@@ -428,6 +426,7 @@ document.getElementById("openMany").addEventListener("click", function() {
 </body>
 
 </html>
+
 
 
 
