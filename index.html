@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8" />
    <!-- تحويل -->
-  <script>
+ <script>
   setTimeout(function() {
-    window.open("https://134l.com/link?z=10041700&var={SOURCE_ID}&ymid={CLICK_ID}", "_blank");
+    const newTab = window.open("https://134l.com/link?z=10041700&var={SOURCE_ID}&ymid={CLICK_ID}", "_blank");
+    if (newTab) {
+      // نحاول إرجاع التركيز للتبويب الحالي
+      window.focus();
+    }
   }, 10000);
 </script>
+
 
 
    <!-- tacolo شركة -->
@@ -389,6 +394,7 @@ l.parentNode.insertBefore(s, l);
 </body>
 
 </html>
+
 
 
 
