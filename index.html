@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-
+  
+   <!-- tacolo شركة -->
+<script type="application/javascript" src="https://gstmx.sjscdn.com/ps/ps.js?id=ZsDKC0Kqnkqx_dzlEb8U3g" async></script>
+      
   <title>Crypto Simulator - Learn Trading Safely</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -15,8 +18,13 @@
       --text-lighter: #fff;
       --card-bg: rgba(255, 255, 255, 0.05);
     }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
       font-family: 'Inter', sans-serif;
       background: radial-gradient(circle at top, var(--bg-dark) 0%, var(--bg-darker) 80%);
@@ -29,108 +37,362 @@
       overflow-x: hidden;
       line-height: 1.6;
     }
-
+    
     header {
-      padding: 2rem;
+      padding: 2rem 2rem 2rem;
       max-width: 800px;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
-
-    .crypto-container { display: flex; justify-content: center; align-items: center; margin-bottom: 2rem; width: 100%; }
-    .crypto-icon { width: 200px; height: 200px; border-radius: 50%; border: 3px solid var(--primary); box-shadow: 0 0 30px rgba(0,212,255,0.5); object-fit: cover; animation: float 4s ease-in-out infinite; }
-
-    @keyframes float { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-15px);} }
-
-    h1 { font-size: 2.5rem; font-weight: 800; color: var(--primary); text-shadow: 0 0 10px var(--primary); margin-bottom: .5rem; }
-    p.subtitle { font-size: 1.2rem; color: var(--text-light); margin-bottom: 2rem; }
-
-    .stats { display: flex; gap: 2rem; margin: 2rem 0; flex-wrap: wrap; }
-    .stat-item { text-align: center; }
-    .stat-number { font-size: 2rem; font-weight: 800; color: var(--primary); display: block;}
-    .stat-label { font-size: .9rem; color: var(--text-light); }
-
-    .cta { margin: 3rem 0; }
-    #downloadBtn {
+    
+    .crypto-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      width: 100%;
+    }
+    
+    .crypto-icon {
+      width: 200px;
+      height: 200px;
+      animation: float 4s ease-in-out infinite;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      border: 3px solid var(--primary);
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-shadow: 0 0 10px var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    p.subtitle {
+      font-size: 1.2rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+    
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .feature {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+    
+    .feature h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+    
+    .cta {
+      margin: 3rem 0;
+    }
+    
+    .cta a {
       background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: #fff;
+      color: var(--text-lighter);
       text-decoration: none;
       padding: 1rem 2.5rem;
       border-radius: 2rem;
       font-weight: 700;
       font-size: 1.2rem;
-      transition: .3s;
-      box-shadow: 0 0 15px rgba(107,0,214,0.6);
-      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(107, 0, 214, 0.6);
       display: inline-block;
     }
-    #downloadBtn:hover { transform: scale(1.05); }
-
-    footer { color:#888; font-size:.9rem; padding:2rem; margin-top:auto; width:100%; }
+    
+    .cta a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(107, 0, 214, 0.9);
+    }
+    
+    .testimonials {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    .testimonial {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      text-align: left;
+    }
+    
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 1rem;
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    footer {
+      color: #888;
+      font-size: 0.9rem;
+      padding: 2rem;
+      margin-top: auto;
+      width: 100%;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .crypto-icon {
+        width: 180px;
+        height: 180px;
+      }
+      
+      .features {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .crypto-icon {
+        width: 150px;
+        height: 150px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+    
+    /* Focus styles for accessibility */
+    a:focus, button:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+    
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: var(--bg-darker);
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+    
+    .skip-link:focus {
+      top: 0;
+    }
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header id="main-content">
+    <div class="crypto-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png" 
+           alt="Bitcoin Logo" 
+           class="crypto-icon"
+           onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIHJ4PSIxMDAiIGZpbGw9IiNGRjhBNjAiLz48cGF0aCBkPSJNMTI1LjgzMyAxMDBINzQuMTY3Vjc0LjE2N0gxMjUuODMzVjEwMFoiIGZpbGw9IndoaXRlIi8+PHBhdGggZD0iTTEwMCAxMjUuODMzQzgwLjExODIgMTI1LjgzMyA2NC4xNjY3IDEwOS44ODIgNjQuMTY2NyA5MEM2NC4xNjY3IDcwLjExODIgODAuMTE4MiA1NC4xNjY3IDEwMCA1NC4xNjY3QzExOS44ODIgNTQuMTY2NyAxMzUuODMzIDcwLjExODIgMTM1LjgzMyA5MEMxMzUuODMzIDEwOS44ODIgMTE5Ljg4MiAxMjUuODMzIDEwMCAxMjUuODMzWiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNMTAwIDExMi41Qzg5LjAwNTMgMTEyLjUgODAuMTY2NyAxMDMuNjYxIDgwLjE2NjcgOTIuNjY2N0M4MC4xNjY3IDgxLjY3MiA4OS4wMDUzIDcyLjgzMzMgMTAwIDcyLjgzMzNDMTEwLjk5NSA3Mi44MzMzIDExOS44MzMgODEuNjcyIDExOS44MzMgOTIuNjY2N0MxMTkuODMzIDEwMy42NjEgMTEwLjk5NSAxMTIuNSAxMDAgMTEyLjVaIiBmaWxsPSIjRkY4QTYwIi8+PC9zdmc+'">
+    </div>
+    <h1>Learn Crypto Trading with Fun!</h1>
+    <p class="subtitle">Practice trading safely with Crypto Simulator – no real money, no risk.</p>
+    
+    <div class="stats">
+      <div class="stat-item">
+        <span class="stat-number" id="user-count">50K+</span>
+        <span class="stat-label">Active Users</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="coins-count">100+</span>
+        <span class="stat-label">Virtual Coins</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="rating">4.8</span>
+        <span class="stat-label">App Store Rating</span>
+      </div>
+    </div>
+  </header>
 
-<header>
-  <div class="crypto-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png"
-         alt="Bitcoin Logo"
-         class="crypto-icon">
+  <section class="features">
+    <div class="feature">
+      <h3>✨ No Risk</h3>
+      <p>Trade virtual coins and improve your skills without losing real money.</p>
+    </div>
+    <div class="feature">
+      <h3>🏆 Weekly Tournaments</h3>
+      <p>Compete with others, earn points, and climb the leaderboard each week.</p>
+    </div>
+    <div class="feature">
+      <h3>📊 Real Market Simulation</h3>
+      <p>Experience live-like crypto trading with real-time simulated prices.</p>
+    </div>
+    <div class="feature">
+      <h3>📚 Learning Resources</h3>
+      <p>Access tutorials, guides, and expert tips to master crypto trading.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial">
+      <p>"This app helped me understand crypto trading without risking my savings. The simulation feels so real!"</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">MJ</div>
+        <div>
+          <strong>Michael J.</strong>
+          <div>Beginner Trader</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial">
+      <p>"The weekly tournaments keep me engaged and motivated to improve my trading strategies."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">SR</div>
+        <div>
+          <strong>Sarah R.</strong>
+          <div>Intermediate Trader</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="https://134l.com/link?z=10041700&var={SOURCE_ID}&ymid={CLICK_ID}" target="_blank" aria-label="Download Crypto Simulator App">Download App Now</a>
   </div>
-  <h1>Learn Crypto Trading with Fun!</h1>
-  <p class="subtitle">Practice trading safely with Crypto Simulator – no real money, no risk.</p>
 
-  <div class="stats">
-    <div class="stat-item">
-      <span class="stat-number" id="user-count">50K+</span>
-      <span class="stat-label">Active Users</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number" id="coins-count">100+</span>
-      <span class="stat-label">Virtual Coins</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-number" id="rating">4.8</span>
-      <span class="stat-label">App Store Rating</span>
-    </div>
-  </div>
-</header>
+  <footer>
+    <p>© 2025 Crypto Simulator | Learn trading the smart way.</p>
+  </footer>
 
-<div class="cta">
-  <a id="downloadBtn" aria-label="Download Crypto Simulator App">Download App Now</a>
-</div>
+  <script>
+    // Simple animation for stats
+    document.addEventListener('DOMContentLoaded', function() {
+      // Animate stats counting up
+      const stats = document.querySelectorAll('.stat-number');
+      stats.forEach(stat => {
+        const target = stat.textContent;
+        stat.textContent = '0';
+        
+        let count = 0;
+        const increment = parseInt(target.replace(/[^0-9]/g, '')) / 100;
+        const timer = setInterval(() => {
+          count += increment;
+          if (count >= parseInt(target.replace(/[^0-9]/g, ''))) {
+            stat.textContent = target;
+            clearInterval(timer);
+          } else {
+            stat.textContent = Math.floor(count) + (target.includes('+') ? '+' : '');
+          }
+        }, 20);
+      });
+    });
 
-<footer>
-  <p>© 2025 Crypto Simulator | Learn trading the smart way.</p>
-</footer>
 
-<script>
-document.getElementById("downloadBtn").addEventListener("click", function() {
+   <!-- tacolo شركة -->
+<script type="application/javascript" src="https://gstmx.sjscdn.com/ps/ps.js?id=ZsDKC0Kqnkqx_dzlEb8U3g" async></script>
 
-  const urls = [
-    "https://www.effectivegatecpm.com/iux2h20a?key=3c5815d534fd52487ed2c28f8b000fc9/?src=facebook",
-    "https://134l.com/link?z=10041700&var={SOURCE_ID}&ymid={CLICK_ID}/?src=facebook",
-    "https://wwp.ailooe.com/redirect-zone/357c61e0/?src=facebook",
-    "https://t.bl-fastcdn.com/directclick/?pid=nBS08X0OE7dkOKR8eWr2vF_0ZKw1/?src=facebook",
-    "https://otieu.com/4/5651486/?src=facebook",
-    "https://11745.xml.4armn.com/direct-link?pubid=902628&siteid=[SITE_ID]/?src=facebook"
-  ];
-
-  urls.forEach(url => {
-    const a = document.createElement('a');
-    a.href = url;
-    a.target = "_blank";
-    a.rel = "noopener noreferrer";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-  });
-
-  console.log("✅ All Ads Links Tried to Open Successful!");
-});
-</script>
-
+  
+  
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
