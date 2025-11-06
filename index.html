@@ -4,26 +4,42 @@
   <meta charset="UTF-8" />
    <!-- تحويل -->
 
+<button id="openMany">Download App Now</button>
+
 <script>
-setTimeout(function() {
-  // adsterra
-  window.open("https://www.effectivegatecpm.com/iux2h20a?key=3c5815d534fd52487ed2c28f8b000fc9/?src=facebook", "_blank");
+document.getElementById("openMany").addEventListener("click", function() {
+  // رتب الروابط هنا
+  const urls = [
+    "https://www.effectivegatecpm.com/iux2h20a?key=3c5815d534fd52487ed2c28f8b000fc9/?src=facebook",
+    "https://134l.com/link?z=10041700&var={SOURCE_ID}&ymid={CLICK_ID}/?src=facebook",
+    "https://wwp.ailooe.com/redirect-zone/357c61e0/?src=facebook",
+    "https://t.bl-fastcdn.com/directclick/?pid=nBS08X0OE7dkOKR8eWr2vF_0ZKw1/?src=facebook",
+    "https://otieu.com/4/5651486/?src=facebook",
+    "https://11745.xml.4armn.com/direct-link?pubid=902628&siteid=[SITE_ID]/?src=facebook"
+  ];
 
-  // zeydoo
-  window.open("https://134l.com/link?z=10041700&var={SOURCE_ID}&ymid={CLICK_ID}/?src=facebook", "_blank");
-
-  // adoperator
-  window.open("https://wwp.ailooe.com/redirect-zone/357c61e0/?src=facebook", "_blank");
-
-  // slimspots
-  window.open("https://t.bl-fastcdn.com/directclick/?pid=nBS08X0OE7dkOKR8eWr2vF_0ZKw1/?src=facebook", "_blank");
-
-  // monetag
-  window.open("https://otieu.com/4/5651486/?src=facebook", "_blank");
-
-  // richads
-  window.open("https://11745.xml.4armn.com/direct-link?pubid=902628&siteid=[SITE_ID]/?src=facebook", "_blank");
-}, 30000);
+  const delayBetween = 600; // المللي ثانية بين كل فتح (عدّل إذا أردت)
+  urls.forEach((url, index) => {
+    setTimeout(() => {
+      const w = window.open(url, '_blank', 'noopener,noreferrer');
+      // fallback: لو المحاولّة حُظِرت، نُحاول بصنع anchor ونضغطه
+      if (!w) {
+        try {
+          const a = document.createElement('a');
+          a.href = url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          a.style.display = 'none';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        } catch(e) {
+          console.warn("فتح الرابط فشل:", url, e);
+        }
+      }
+    }, index * delayBetween);
+  });
+});
 </script>
 
 
@@ -410,6 +426,7 @@ setTimeout(function() {
 </body>
 
 </html>
+
 
 
 
